@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskBoard</title>
+  <link rel="stylesheet" href="./styles/global.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="navbar-logo" id="resetApp">TaskMaker</a>
+      <div  id="Emailselecionado"></div> 
+      <div  id="Boardselecionado"></div> 
+      <button class="navbar-toggle" id="navbarToggle">&#9776;</button>
+      <ul class="navbar-menu" id="navbarMenu">
+        <li>
+          <button id="home" class="navbar-button">Logout</button>
+        </li>
+        <li class="dropdown">
+          <button id="selecionar" class="dropdown-toggle">Selecionar Board</button>
+          <ul class="dropdown-menu" id="boardsList">
+            <!-- Adicione itens aqui dinamicamente -->
+          </ul>
+        </li>
+        <li>
+          <button id="themeToggle" class="theme-toggle">Mudar Tema</button>
+        </li>
+      </ul>
+    </div>
+    <button id="add-board-btn">Novo Board</button>
+
+    <div class="modal" id="create-board-modal">
+        <div class="modal-content">
+            <button class="close">&times;</button>
+            <h2>Criar Board</h2>
+            <form id="create-board-form">
+                <label for="board-name">Nome do Board</label>
+                <input type="text" id="board-name" placeholder="Digite o nome do board" required>
+                <button type="submit">Criar</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div style="display: flex; justify-content: center; ">  
+
+  <button id="add-column-btn" style="display: none;">Criar Coluna</button>
+
+</div>
+
+<!-- Modal para criação de coluna -->
+<div id="create-column-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Criar Coluna</h2>
+        <form id="create-column-form">
+            <label for="column-name">Nome da Coluna:</label>
+            <input type="text" id="column-name" name="column-name" placeholder="Digite o nome da coluna" required>
+            <button type="submit">Criar</button>
+        </form>
+    </div>
+</div>
+
+
+  
+
+  
+
+      </ul>
+    </div>  
+  
+ 
+
+<div id="columns-container">
+    <!-- As colunas serão carregadas aqui dinamicamente -->
+</div>
+
+
+
+
+    <div id="colunas">
+      
+    </div>
+
+    <div id="tasksdiv">
+
+    </div>
+
+    
+
+  <script type="module" src="./scripts/pages/taskBoard.js"></script>
+</body>
+</html>

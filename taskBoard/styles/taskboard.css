@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000; /* Fundo preto */
+  color: #fff; /* Texto branco */
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background-color: #1c1c1c;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.project-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-selector select,
+.project-selector button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background-color: #333;
+  color: #fff;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#columns {
+  display: flex;
+  gap: 20px; /* Espaço entre as colunas */
+  overflow-x: auto; /* Permite rolagem horizontal caso as colunas excedam o espaço disponível */
+}
+
+.column {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  padding: 10px;
+  min-width: 250px; /* Largura mínima para cada coluna */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.column-header {
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.tasks {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  background-color: #262626;
+  border-radius: 5px;
+  overflow-y: auto; /* Permite rolagem vertical se houver muitas tarefas */
+}
+
+.task {
+  padding: 10px;
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  cursor: grab;
+  transition: background-color 0.3s ease;
+}
+
+.task:active {
+  cursor: grabbing;
+}
+
+.task:hover {
+  background-color: #555;
+}
+
+button.add-task {
+  background-color: #7d22e4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.add-task:hover {
+  background-color: #0796af;
+}
+
+#add-column {
+  align-self: center;
+  padding: 10px 20px;
+  background-color: #7d22e4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-column:hover {
+  background-color: #0796af;
+}
